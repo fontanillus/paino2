@@ -1,0 +1,76 @@
+	*,
+	*::before,
+	*::after {
+	    box-sizing: border-box;
+	}
+
+	body {
+	    background-color: steelblue;
+	    margin: 0;
+	    min-height: 100vh;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.piano {
+	    display: flex;
+	}
+
+	.key {
+	    height: calc(var(--width)*3);
+	    width: var(--width);
+	}
+
+	.white {
+	    --width: 100px;
+	    background-color: white;
+	    border: 1px solid #333;
+	    display: flex;
+	    justify-content: center;
+	    align-items: end;
+	    font-weight: 400;
+	    color: red;
+	}
+
+	.white.active {
+	    background-color: #CCC;
+	}
+
+	.black {
+	    --width: 60px;
+	    background-color: black;
+	    margin-left: calc(var(--width) / -2);
+	    margin-right: calc(var(--width) / -2);
+	    display: flex;
+	    justify-content: center;
+	    align-items: end;
+	    font-weight: 400;
+	    color: yellow;
+	    z-index: 2;
+	}
+
+	.black.active {
+	    background-color: #333;
+	}
+
+	#texto {
+	    display: block;
+	    color: black;
+	    font-size: 0.7em;
+	    margin-bottom: 2em;
+	    background-color: aliceblue;
+	    padding: 3px;
+	}
+
+	#texto p,
+	#texto ul {
+	    margin: 2px 0;
+	}
+
+	summary {
+	    text-align: left;
+	    background-color: steelblue;
+	    color: aliceblue;
+
+	}
